@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ASUSVIVOBOOK.Insurance_Claims_Fraud_Source_DB"
+  DTS:DTSID="{27374C9D-7B97-481B-A125-C673E88AB8F8}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ASUSVIVOBOOK;Initial Catalog=Insurance_Claims_Fraud_Source_DB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
