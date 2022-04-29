@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Insurance_Claims_Fraud_Load_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{FD80D015-BF64-4A56-BF20-D12BF4FFF9F9}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{C3294598-357C-4143-A41C-141CE03A46A3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1516,6 +1516,13 @@
                       cachedName="CUSTOMER_ID"
                       externalMetadataColumnId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMER_ID]"
                       lineageId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[CUSTOMER_ID]" />
+                    <inputColumn
+                      refId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].Columns[TXN_DATE_TIME]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="TXN_DATE_TIME"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[TXN_DATE_TIME]"
+                      lineageId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[TXN_DATE_TIME]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1559,6 +1566,11 @@
                       dataType="wstr"
                       length="50"
                       name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[TXN_DATE_TIME]"
+                      dataType="dbTimeStamp2"
+                      name="TXN_DATE_TIME"
+                      scale="7" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1733,6 +1745,16 @@
                       lineageId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[CUSTOMER_ID]"
                       name="CUSTOMER_ID"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[TXN_DATE_TIME]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TXN_DATE_TIME]"
+                      lineageId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[TXN_DATE_TIME]"
+                      name="TXN_DATE_TIME"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1776,6 +1798,11 @@
                       dataType="wstr"
                       length="50"
                       name="CUSTOMER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TXN_DATE_TIME]"
+                      dataType="dbTimeStamp2"
+                      name="TXN_DATE_TIME"
+                      scale="7" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1789,6 +1816,12 @@
                       length="50"
                       lineageId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TRANSACTION_ID]"
                       name="TRANSACTION_ID" />
+                    <outputColumn
+                      refId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TXN_DATE_TIME]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TXN_DATE_TIME]"
+                      name="TXN_DATE_TIME"
+                      scale="7" />
                     <outputColumn
                       refId="Package\Extract Insurance Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LOSS_DT]"
                       dataType="dbDate"
@@ -2885,6 +2918,10 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="218.4,41.6"
+          Id="Package\Extract Agent Data to Staging"
+          TopLeft="593.57143867989,253.882356501781" />
+        <NodeLayout
           Size="236,41.6"
           Id="Package\Extract Customer Data to Staging"
           TopLeft="37.1428577753963,23.7058826854072" />
@@ -2893,33 +2930,33 @@
           Id="Package\Extract Insurance Data to Staging"
           TopLeft="292.142862118021,139.176472540133" />
         <NodeLayout
-          Size="224.8,41.6"
-          Id="Package\Extract Vendor Data to Staging"
-          TopLeft="180.000003065382,81.8235305593088" />
-        <NodeLayout
           Size="244,41.6"
           Id="Package\Extract PolicyClaim Data to Staging"
           TopLeft="441.428578946055,194.235296841724" />
+        <NodeLayout
+          Size="224.8,41.6"
+          Id="Package\Extract Vendor Data to Staging"
+          TopLeft="179.285717338932,81.8235305593088" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="273.142857775396,44.5058826854072">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.2571452899856,37.3176478739015"
+              EndConnector="18.5428595635358,37.3176478739016"
               Start="0,0"
-              End="19.2571452899856,29.8176478739015">
+              End="18.5428595635358,29.8176478739016">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="15.2571452899856,0" />
+                    End="14.5428595635358,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="15.2571452899856,0"
-                    Point2="19.2571452899856,0"
-                    Point3="19.2571452899856,4" />
+                    Point1="14.5428595635358,0"
+                    Point2="18.5428595635358,0"
+                    Point3="18.5428595635358,4" />
                   <mssgle:LineSegment
-                    End="19.2571452899856,29.8176478739015" />
+                    End="18.5428595635358,29.8176478739016" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2930,24 +2967,24 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="404.800003065382,102.623530559309">
+          TopLeft="404.085717338932,102.623530559309">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="6.14285905263876,36.5529419808241"
+              EndConnector="6.85714477908891,36.5529419808242"
               Start="0,0"
-              End="6.14285905263876,29.0529419808241">
+              End="6.85714477908891,29.0529419808242">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="2.14285905263876,0" />
+                    End="2.85714477908891,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="2.14285905263876,0"
-                    Point2="6.14285905263876,0"
-                    Point3="6.14285905263876,4" />
+                    Point1="2.85714477908891,0"
+                    Point2="6.85714477908891,0"
+                    Point3="6.85714477908891,4" />
                   <mssgle:LineSegment
-                    End="6.14285905263876,29.0529419808241" />
+                    End="6.85714477908891,29.0529419808242" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2984,10 +3021,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Extract Agent Data to Staging"
-          TopLeft="593.57143867989,253.882356501781" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="685.428578946055,215.035296841724">
@@ -3019,6 +3052,69 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Extract Agent Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Extract Agent Data to Staging\Flat File Source"
+          TopLeft="198,172" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Extract Agent Data to Staging\OLE DB Destination"
+          TopLeft="654,171" />
+        <EdgeLayout
+          Id="Package\Extract Agent Data to Staging.Paths[Flat File Source Output]"
+          TopLeft="348.4,192.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="305.6,0"
+              Start="0,0"
+              End="298.1,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="298.1,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Agent Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Extract Agent Data to Staging.EventHandlers[OnPreExecute]\Truncate StgAgent"
+          TopLeft="476,130" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Agent Data to Staging\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Extract Customer Data to Staging">
     <LayoutInfo>
@@ -3057,19 +3153,18 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Customer Data to Staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]\Truncate StgCustomer"
+          TopLeft="482,135" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract Customer Data to Staging\Load Data to Customer Staging Table">
     <Properties>
@@ -3083,18 +3178,19 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="184,41.6"
-          Id="Package\Extract Customer Data to Staging.EventHandlers[OnPreExecute]\Truncate StgCustomer"
-          TopLeft="482,135" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Data to Staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Extract Insurance Data to Staging">
     <LayoutInfo>
@@ -3146,7 +3242,7 @@
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Insurance Data to Staging\OLE DB Source">
+    design-time-name="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3159,7 +3255,70 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table">
+    design-time-name="Package\Extract Insurance Data to Staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract PolicyClaim Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="267.2,41.6"
+          Id="Package\Extract PolicyClaim Data to Staging\Load Data to PolicyClaims Staging Table"
+          TopLeft="634,137" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Extract PolicyClaim Data to Staging\Flat File Source"
+          TopLeft="260,136" />
+        <EdgeLayout
+          Id="Package\Extract PolicyClaim Data to Staging.Paths[Flat File Source Output]"
+          TopLeft="410.4,157.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="223.6,0"
+              Start="0,0"
+              End="216.1,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="216.1,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract PolicyClaim Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\Extract PolicyClaim Data to Staging.EventHandlers[OnPreExecute]\Truncate StgPolicyClaim"
+          TopLeft="476,140" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract PolicyClaim Data to Staging\Load Data to PolicyClaims Staging Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3209,19 +3368,18 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Vendor Data to Staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Vendor Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Extract Vendor Data to Staging.EventHandlers[OnPreExecute]\Truncate StgVendor"
+          TopLeft="498,157" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract Vendor Data to Staging\Load Data to Vendor Staging Table">
     <Properties>
@@ -3235,58 +3393,8 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Vendor Data to Staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Extract Vendor Data to Staging.EventHandlers[OnPreExecute]\Truncate StgVendor"
-          TopLeft="498,157" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract PolicyClaim Data to Staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="267.2,41.6"
-          Id="Package\Extract PolicyClaim Data to Staging\Load Data to PolicyClaims Staging Table"
-          TopLeft="634,137" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Extract PolicyClaim Data to Staging\Flat File Source"
-          TopLeft="260,136" />
-        <EdgeLayout
-          Id="Package\Extract PolicyClaim Data to Staging.Paths[Flat File Source Output]"
-          TopLeft="410.4,157.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="223.6,0"
-              Start="0,0"
-              End="216.1,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="216.1,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract PolicyClaim Data to Staging\Load Data to PolicyClaims Staging Table">
+    design-time-name="Package\Extract Vendor Data to Staging\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3298,80 +3406,5 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract PolicyClaim Data to Staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="191.2,41.6"
-          Id="Package\Extract PolicyClaim Data to Staging.EventHandlers[OnPreExecute]\Truncate StgPolicyClaim"
-          TopLeft="476,140" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Agent Data to Staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Extract Agent Data to Staging\Flat File Source"
-          TopLeft="198,172" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Extract Agent Data to Staging\OLE DB Destination"
-          TopLeft="654,171" />
-        <EdgeLayout
-          Id="Package\Extract Agent Data to Staging.Paths[Flat File Source Output]"
-          TopLeft="348.4,192.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="305.6,0"
-              Start="0,0"
-              End="298.1,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="298.1,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Agent Data to Staging\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Agent Data to Staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="166.4,41.6"
-          Id="Package\Extract Agent Data to Staging.EventHandlers[OnPreExecute]\Truncate StgAgent"
-          TopLeft="476,130" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
