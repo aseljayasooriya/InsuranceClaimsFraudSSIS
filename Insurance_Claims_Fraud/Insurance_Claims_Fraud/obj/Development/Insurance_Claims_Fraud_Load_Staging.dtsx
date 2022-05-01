@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Insurance_Claims_Fraud_Load_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{C3294598-357C-4143-A41C-141CE03A46A3}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{77BD9636-3789-4C72-A559-01F69DBEAF03}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -247,6 +247,23 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute Insurance_Claims_Fraud_Load_DW"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{8A7044EF-B311-42B2-AAA4-90938B58D600}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Insurance_Claims_Fraud_Load_DW"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Insurance_Claims_Fraud_Load_DW.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Extract Agent Data to Staging"
       DTS:CreationName="Microsoft.Pipeline"
@@ -1538,11 +1555,11 @@
                       name="TRANSACTION_ID" />
                     <externalMetadataColumn
                       refId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[LOSS_DT]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       name="LOSS_DT" />
                     <externalMetadataColumn
                       refId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[REPORT_DT]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       name="REPORT_DT" />
                     <externalMetadataColumn
                       refId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[PREMIUM_AMOUNT]"
@@ -1568,9 +1585,8 @@
                       name="CUSTOMER_ID" />
                     <externalMetadataColumn
                       refId="Package\Extract Insurance Data to Staging\Load Data to Insurance Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[TXN_DATE_TIME]"
-                      dataType="dbTimeStamp2"
-                      name="TXN_DATE_TIME"
-                      scale="7" />
+                      dataType="dbTimeStamp"
+                      name="TXN_DATE_TIME" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2904,6 +2920,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Extract Agent Data to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{8AA25B90-7B25-45F2-AFAA-827B3C29515E}"
+      DTS:From="Package\Extract Agent Data to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Execute Insurance_Claims_Fraud_Load_DW" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2920,43 +2944,49 @@
         <NodeLayout
           Size="218.4,41.6"
           Id="Package\Extract Agent Data to Staging"
-          TopLeft="593.57143867989,253.882356501781" />
+          TopLeft="263.412702898589,295.091507406521" />
         <NodeLayout
           Size="236,41.6"
           Id="Package\Extract Customer Data to Staging"
-          TopLeft="37.1428577753963,23.7058826854072" />
+          TopLeft="13.3333335603987,22.0065362563458" />
         <NodeLayout
           Size="237.6,41.6"
           Id="Package\Extract Insurance Data to Staging"
-          TopLeft="292.142862118021,139.176472540133" />
+          TopLeft="126.269843420204,161.692812725197" />
         <NodeLayout
           Size="244,41.6"
           Id="Package\Extract PolicyClaim Data to Staging"
-          TopLeft="441.428578946055,194.235296841724" />
+          TopLeft="185.079368231247,229.071898637484" />
         <NodeLayout
           Size="224.8,41.6"
           Id="Package\Extract Vendor Data to Staging"
-          TopLeft="179.285717338932,81.8235305593088" />
+          TopLeft="72.1428583714427,88.6209162755546" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="273.142857775396,44.5058826854072">
+          TopLeft="131.333333560399,63.6065362563457">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="18.5428595635358,37.3176478739016"
+              EndConnector="53.209524811044,25.0143800192089"
               Start="0,0"
-              End="18.5428595635358,29.8176478739016">
+              End="53.209524811044,17.5143800192089">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="14.5428595635358,0" />
+                    End="0,8.50719000960444" />
                   <mssgle:CubicBezierSegment
-                    Point1="14.5428595635358,0"
-                    Point2="18.5428595635358,0"
-                    Point3="18.5428595635358,4" />
+                    Point1="0,8.50719000960444"
+                    Point2="0,12.5071900096044"
+                    Point3="4,12.5071900096044" />
                   <mssgle:LineSegment
-                    End="18.5428595635358,29.8176478739016" />
+                    End="49.209524811044,12.5071900096044" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.209524811044,12.5071900096044"
+                    Point2="53.209524811044,12.5071900096044"
+                    Point3="53.209524811044,16.5071900096044" />
+                  <mssgle:LineSegment
+                    End="53.209524811044,17.5143800192089" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2967,24 +2997,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="404.085717338932,102.623530559309">
+          TopLeft="184.542858371443,130.220916275555">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="6.85714477908891,36.5529419808242"
+              EndConnector="60.5269850487617,31.4718964496426"
               Start="0,0"
-              End="6.85714477908891,29.0529419808242">
+              End="60.5269850487617,23.9718964496426">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="2.85714477908891,0" />
+                    End="0,11.7359482248213" />
                   <mssgle:CubicBezierSegment
-                    Point1="2.85714477908891,0"
-                    Point2="6.85714477908891,0"
-                    Point3="6.85714477908891,4" />
+                    Point1="0,11.7359482248213"
+                    Point2="0,15.7359482248213"
+                    Point3="4,15.7359482248213" />
                   <mssgle:LineSegment
-                    End="6.85714477908891,29.0529419808242" />
+                    End="56.5269850487617,15.7359482248213" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.5269850487617,15.7359482248213"
+                    Point2="60.5269850487617,15.7359482248213"
+                    Point3="60.5269850487617,19.7359482248213" />
+                  <mssgle:LineSegment
+                    End="60.5269850487617,23.9718964496426" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2995,24 +3031,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="529.742862118021,159.976472540133">
+          TopLeft="245.069843420204,203.292812725197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="33.6857168280346,34.2588243015909"
+              EndConnector="62.0095248110429,25.7790859122865"
               Start="0,0"
-              End="33.6857168280346,26.7588243015909">
+              End="62.0095248110429,18.2790859122865">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="29.6857168280346,0" />
+                    End="0,8.88954295614325" />
                   <mssgle:CubicBezierSegment
-                    Point1="29.6857168280346,0"
-                    Point2="33.6857168280346,0"
-                    Point3="33.6857168280346,4" />
+                    Point1="0,8.88954295614325"
+                    Point2="0,12.8895429561432"
+                    Point3="4,12.8895429561432" />
                   <mssgle:LineSegment
-                    End="33.6857168280346,26.7588243015909" />
+                    End="58.0095248110429,12.8895429561432" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.0095248110429,12.8895429561432"
+                    Point2="62.0095248110429,12.8895429561432"
+                    Point3="62.0095248110429,16.8895429561432" />
+                  <mssgle:LineSegment
+                    End="62.0095248110429,18.2790859122865" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3023,24 +3065,68 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="685.428578946055,215.035296841724">
+          TopLeft="307.079368231247,270.671898637484">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="17.3428597338345,38.8470596600567"
+              EndConnector="65.5333346673419,24.4196087690374"
               Start="0,0"
-              End="17.3428597338345,31.3470596600567">
+              End="65.5333346673419,16.9196087690374">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="13.3428597338345,0" />
+                    End="0,8.20980438451872" />
                   <mssgle:CubicBezierSegment
-                    Point1="13.3428597338345,0"
-                    Point2="17.3428597338345,0"
-                    Point3="17.3428597338345,4" />
+                    Point1="0,8.20980438451872"
+                    Point2="0,12.2098043845187"
+                    Point3="4,12.2098043845187" />
                   <mssgle:LineSegment
-                    End="17.3428597338345,31.3470596600567" />
+                    End="61.5333346673419,12.2098043845187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.5333346673419,12.2098043845187"
+                    Point2="65.5333346673419,12.2098043845187"
+                    Point3="65.5333346673419,16.2098043845187" />
+                  <mssgle:LineSegment
+                    End="65.5333346673419,16.9196087690374" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="285.6,41.6"
+          Id="Package\Execute Insurance_Claims_Fraud_Load_DW"
+          TopLeft="313.390028012737,359.921573675215" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="372.612702898589,336.691507406521">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.5773251141481,23.2300662686938"
+              Start="0,0"
+              End="83.5773251141481,15.7300662686938">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.6150331343469" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.6150331343469"
+                    Point2="0,11.6150331343469"
+                    Point3="4,11.6150331343469" />
+                  <mssgle:LineSegment
+                    End="79.5773251141481,11.6150331343469" />
+                  <mssgle:CubicBezierSegment
+                    Point1="79.5773251141481,11.6150331343469"
+                    Point2="83.5773251141481,11.6150331343469"
+                    Point3="83.5773251141481,15.6150331343469" />
+                  <mssgle:LineSegment
+                    End="83.5773251141481,15.7300662686938" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3056,15 +3142,15 @@
     design-time-name="Package\Extract Agent Data to Staging">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Extract Agent Data to Staging\Flat File Source"
-          TopLeft="198,172" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Extract Agent Data to Staging\OLE DB Destination"
           TopLeft="654,171" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Extract Agent Data to Staging\Flat File Source"
+          TopLeft="198,172" />
         <EdgeLayout
           Id="Package\Extract Agent Data to Staging.Paths[Flat File Source Output]"
           TopLeft="348.4,192.3">
@@ -3084,7 +3170,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3119,7 +3207,7 @@
     design-time-name="Package\Extract Customer Data to Staging">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Extract Customer Data to Staging\OLE DB Source"
@@ -3147,7 +3235,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3271,7 +3361,7 @@
     design-time-name="Package\Extract PolicyClaim Data to Staging">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="267.2,41.6"
           Id="Package\Extract PolicyClaim Data to Staging\Load Data to PolicyClaims Staging Table"
@@ -3299,7 +3389,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3334,7 +3426,7 @@
     design-time-name="Package\Extract Vendor Data to Staging">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Extract Vendor Data to Staging\OLE DB Source"
@@ -3362,7 +3454,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

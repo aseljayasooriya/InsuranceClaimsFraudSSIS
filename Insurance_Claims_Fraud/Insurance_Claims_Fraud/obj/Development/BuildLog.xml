@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Insurance_Claims_Fraud</Name>
-    <LastWriteTime>2022-04-30T16:05:54.3757501Z</LastWriteTime>
+    <LastWriteTime>2022-05-01T06:05:36.1361817Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Insurance_Claims_Fraud_Load_Staging.dtsx</Name>
-      <LastWriteTime>2022-04-29T08:59:56.5522182Z</LastWriteTime>
+      <LastWriteTime>2022-05-01T06:52:04.9869113Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Insurance_Claims_Fraud_Load_DW.dtsx</Name>
-      <LastWriteTime>2022-04-30T20:11:00.8114265Z</LastWriteTime>
+      <LastWriteTime>2022-05-01T06:26:14.9684798Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ASUSVIVOBOOK</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALhI3xK9eAkuHR+8gipy7cAAAAAACAAAAAAAQZgAAAAEAACAAAABUsTJ38xgf1++uo+ZhCGPN7zu85sGaUPii84HTqpxE3AAAAAAOgAAAAAIAACAAAABzrwGF77no06pr5RB2YsoKJu5ej/PfvLj3X8b9Nm9H95AAAABjl1HAdOmSabIqryDsuKiFbGfXXhNNWUis61ISwH5B6yQKLn8RoBBQQomgk9wNErp3H6xguL16ppzxPYiHSyw114YHMnB6oVNEDJPlEuAE50gl3LYp2y2IDdJOwqNNIKArCpKbtWhfdbp4Elrbp7dULpWNlU8FV/Rx7lSIsbF8wTUyshDoy/WVgrlVWEc4iuVAAAAAoYQQlkOkIDljXLh6yUuk/+wg4Tcka1E1HlD+HkuP749Iwuig78+ZBAFnATILUUcp5JbNf4xig2tTU73V4tSw5w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALhI3xK9eAkuHR+8gipy7cAAAAAACAAAAAAAQZgAAAAEAACAAAAAFcrtkAgs6zNUSoUzMQN6lh3y37hP9c3FKOZDC6C1/8gAAAAAOgAAAAAIAACAAAACs3o++qBrRfzLhEQorO0ZyB/4g1UMUvk4KexSgI+aZC5AAAABMFBmuMuvh/TUjo1qtALh/e7jfC6Jn84bSSeEFF2SWnvv73Rg4m3rJNh3qbF5cNnImGztqi+0f4aJ+MHBvQgWr9M/6cxJBtqHDhGUbVnW4On+tfbTXGyh2CASZYW/RGpm8IaEZf6lMLXPSPgXIuDVU8uRtH/1sdJRjtoDKIqx/FQ+unA3Z7ogYVDFKZtDSDlFAAAAAjUayoDiKRAGzORypfOWc0y/2F6Sp1FDrbNgW5trW34lTWZQQOxAAeuL9JRs5DNPyDqmZ8pRGhcXq4OfM92Pt4Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -344,10 +344,10 @@
                 <SSIS:Property SSIS:Name="Name">Insurance_Claims_Fraud_Load_Staging</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C3294598-357C-4143-A41C-141CE03A46A3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9CFF681B-3E26-495B-B85D-85A288EE7852}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1119,10 +1119,10 @@
                 <SSIS:Property SSIS:Name="Name">Insurance_Claims_Fraud_Load_DW</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{FABE4BCE-C097-4360-8365-8E26195B04CB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D02308E6-1AD3-42D7-A3CE-B409283D384A}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
