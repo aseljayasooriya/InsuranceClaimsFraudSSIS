@@ -9798,13 +9798,13 @@
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
         <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
-        <Column Name="LOSS_DT" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Column Name="LOSS_DT" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
         <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
-        <Column Name="REPORT_DT" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Column Name="REPORT_DT" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
@@ -9837,17 +9837,23 @@
         <Column Name="CUSTOMER_ID" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
+        <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
+        <Column Name="TXN_DATE_TIME" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
       <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq2">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
         <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
-        <Column Name="LOSS_DT" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Column Name="LOSS_DT" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <MinValue>2020-05-12T00:00:00.0000000</MinValue>
         <MaxValue>2021-06-29T00:00:00.0000000</MaxValue>
       </ColumnStatisticsProfile>
       <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq2">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
         <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
-        <Column Name="REPORT_DT" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Column Name="REPORT_DT" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <MinValue>2020-05-17T00:00:00.0000000</MinValue>
         <MaxValue>2021-06-29T00:00:00.0000000</MaxValue>
       </ColumnStatisticsProfile>
@@ -9858,7 +9864,7 @@
         <MinValue>6</MinValue>
         <MaxValue>200</MaxValue>
         <Mean>88.5085949332714</Mean>
-        <StdDev>48.3134582601601</StdDev>
+        <StdDev>48.3134582601602</StdDev>
       </ColumnStatisticsProfile>
       <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq2">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
@@ -9877,6 +9883,13 @@
         <MaxValue>119</MaxValue>
         <Mean>62.9498</Mean>
         <StdDev>32.8889598491652</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq2">
+        <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
+        <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
+        <Column Name="TXN_DATE_TIME" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2020-06-01T00:00:00.0000000</MinValue>
+        <MaxValue>2021-06-30T00:00:00.0000000</MaxValue>
       </ColumnStatisticsProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq2" IsExact="true">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
@@ -9965,12 +9978,12 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00191</Value>
-            <Count>16</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00010</Value>
             <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00191</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00469</Value>
@@ -10009,6 +10022,10 @@
             <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>VNDR00494</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>VNDR00472</Value>
             <Count>16</Count>
           </ValueDistributionItem>
@@ -10023,10 +10040,6 @@
           <ValueDistributionItem>
             <Value>VNDR00312</Value>
             <Count>21</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>VNDR00494</Value>
-            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00418</Value>
@@ -10105,12 +10118,12 @@
             <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00126</Value>
-            <Count>17</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00187</Value>
             <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00126</Value>
+            <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00142</Value>
@@ -10137,24 +10150,24 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00170</Value>
-            <Count>17</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00306</Value>
             <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00170</Value>
+            <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00074</Value>
             <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00090</Value>
-            <Count>16</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00274</Value>
             <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00090</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00451</Value>
@@ -10185,6 +10198,10 @@
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>VNDR00362</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>VNDR00266</Value>
             <Count>20</Count>
           </ValueDistributionItem>
@@ -10197,8 +10214,8 @@
             <Count>20</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00362</Value>
-            <Count>11</Count>
+            <Value>VNDR00537</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00560</Value>
@@ -10209,16 +10226,12 @@
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00537</Value>
-            <Count>16</Count>
+            <Value>VNDR00344</Value>
+            <Count>24</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00018</Value>
             <Count>16</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>VNDR00344</Value>
-            <Count>24</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00072</Value>
@@ -10233,12 +10246,12 @@
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00175</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00029</Value>
             <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00175</Value>
+            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00083</Value>
@@ -10257,12 +10270,12 @@
             <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00077</Value>
-            <Count>19</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00153</Value>
             <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00077</Value>
+            <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00289</Value>
@@ -10417,12 +10430,12 @@
             <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00586</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00505</Value>
             <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00586</Value>
+            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00555</Value>
@@ -10461,23 +10474,23 @@
             <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00553</Value>
-            <Count>15</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00102</Value>
             <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00553</Value>
+            <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00343</Value>
             <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00315</Value>
+            <Value>VNDR00355</Value>
             <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00355</Value>
+            <Value>VNDR00315</Value>
             <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -10517,19 +10530,19 @@
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00408</Value>
-            <Count>13</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00169</Value>
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00045</Value>
-            <Count>14</Count>
+            <Value>VNDR00408</Value>
+            <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00168</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00045</Value>
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -10549,16 +10562,16 @@
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>VNDR00248</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>VNDR00579</Value>
             <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00123</Value>
             <Count>15</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>VNDR00248</Value>
-            <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00498</Value>
@@ -10581,20 +10594,20 @@
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00556</Value>
-            <Count>16</Count>
+            <Value>VNDR00598</Value>
+            <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00163</Value>
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00366</Value>
-            <Count>17</Count>
+            <Value>VNDR00556</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00598</Value>
-            <Count>12</Count>
+            <Value>VNDR00366</Value>
+            <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00251</Value>
@@ -10617,20 +10630,20 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00150</Value>
-            <Count>16</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00429</Value>
             <Count>20</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00277</Value>
-            <Count>17</Count>
+            <Value>VNDR00150</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00280</Value>
             <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00277</Value>
+            <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00414</Value>
@@ -10729,16 +10742,16 @@
             <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>VNDR00209</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>VNDR00269</Value>
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00348</Value>
             <Count>14</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>VNDR00209</Value>
-            <Count>23</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00204</Value>
@@ -10765,12 +10778,12 @@
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00488</Value>
-            <Count>23</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00098</Value>
             <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00488</Value>
+            <Count>23</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00473</Value>
@@ -10793,12 +10806,12 @@
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00151</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00023</Value>
             <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00151</Value>
+            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00599</Value>
@@ -10837,12 +10850,12 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00009</Value>
-            <Count>18</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00113</Value>
             <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00009</Value>
+            <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00479</Value>
@@ -10853,6 +10866,10 @@
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>VNDR00590</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>VNDR00314</Value>
             <Count>22</Count>
           </ValueDistributionItem>
@@ -10861,12 +10878,12 @@
             <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00590</Value>
-            <Count>26</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00425</Value>
             <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00307</Value>
+            <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00448</Value>
@@ -10877,20 +10894,16 @@
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00307</Value>
-            <Count>22</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00511</Value>
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00386</Value>
-            <Count>12</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00428</Value>
             <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00386</Value>
+            <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00115</Value>
@@ -10933,12 +10946,12 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00499</Value>
-            <Count>21</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00008</Value>
             <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00499</Value>
+            <Count>21</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00427</Value>
@@ -11021,12 +11034,12 @@
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00167</Value>
-            <Count>26</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00186</Value>
             <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00167</Value>
+            <Count>26</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00067</Value>
@@ -11041,12 +11054,12 @@
             <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00406</Value>
-            <Count>16</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00152</Value>
             <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00406</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00301</Value>
@@ -11273,16 +11286,16 @@
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>VNDR00401</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>VNDR00588</Value>
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00532</Value>
             <Count>15</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>VNDR00401</Value>
-            <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00433</Value>
@@ -11293,16 +11306,20 @@
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00141</Value>
-            <Count>14</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00378</Value>
             <Count>21</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>VNDR00141</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>VNDR00575</Value>
             <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00359</Value>
+            <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00176</Value>
@@ -11311,10 +11328,6 @@
           <ValueDistributionItem>
             <Value>VNDR00530</Value>
             <Count>15</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>VNDR00359</Value>
-            <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00491</Value>
@@ -11389,12 +11402,12 @@
             <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00031</Value>
-            <Count>25</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00104</Value>
             <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00031</Value>
+            <Count>25</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00522</Value>
@@ -11441,12 +11454,12 @@
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00508</Value>
-            <Count>24</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00529</Value>
             <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00508</Value>
+            <Count>24</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00540</Value>
@@ -11473,12 +11486,12 @@
             <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>VNDR00185</Value>
-            <Count>16</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>VNDR00047</Value>
             <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNDR00185</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>VNDR00050</Value>
@@ -11507,7 +11520,7 @@
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
         <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
-        <Column Name="LOSS_DT" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Column Name="LOSS_DT" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>414</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
@@ -11711,16 +11724,16 @@
             <Count>31</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-18T00:00:00.0000000</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2021-03-12T00:00:00.0000000</Value>
             <Count>21</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-04-30T00:00:00.0000000</Value>
             <Count>24</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-18T00:00:00.0000000</Value>
-            <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-11-01T00:00:00.0000000</Value>
@@ -11835,12 +11848,12 @@
             <Count>32</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-04-27T00:00:00.0000000</Value>
-            <Count>18</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-15T00:00:00.0000000</Value>
             <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-27T00:00:00.0000000</Value>
+            <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-07-15T00:00:00.0000000</Value>
@@ -11871,12 +11884,12 @@
             <Count>35</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-05-03T00:00:00.0000000</Value>
-            <Count>29</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-09T00:00:00.0000000</Value>
             <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-03T00:00:00.0000000</Value>
+            <Count>29</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-11-29T00:00:00.0000000</Value>
@@ -11943,16 +11956,16 @@
             <Count>34</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-24T00:00:00.0000000</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2020-07-27T00:00:00.0000000</Value>
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-11-27T00:00:00.0000000</Value>
             <Count>33</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-24T00:00:00.0000000</Value>
-            <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-08-19T00:00:00.0000000</Value>
@@ -11963,16 +11976,16 @@
             <Count>23</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-07T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2020-10-04T00:00:00.0000000</Value>
             <Count>23</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-12-14T00:00:00.0000000</Value>
             <Count>27</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-07T00:00:00.0000000</Value>
-            <Count>31</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-02-27T00:00:00.0000000</Value>
@@ -12071,12 +12084,12 @@
             <Count>25</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-03-16T00:00:00.0000000</Value>
-            <Count>13</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-10T00:00:00.0000000</Value>
             <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-16T00:00:00.0000000</Value>
+            <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-01-26T00:00:00.0000000</Value>
@@ -12507,12 +12520,12 @@
             <Count>27</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2020-10-16T00:00:00.0000000</Value>
-            <Count>28</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-16T00:00:00.0000000</Value>
             <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-16T00:00:00.0000000</Value>
+            <Count>28</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-05-20T00:00:00.0000000</Value>
@@ -12635,16 +12648,16 @@
             <Count>23</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-13T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2020-10-19T00:00:00.0000000</Value>
             <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-01-01T00:00:00.0000000</Value>
             <Count>17</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-13T00:00:00.0000000</Value>
-            <Count>24</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-12-09T00:00:00.0000000</Value>
@@ -12699,12 +12712,12 @@
             <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2020-10-13T00:00:00.0000000</Value>
-            <Count>22</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-19T00:00:00.0000000</Value>
             <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-13T00:00:00.0000000</Value>
+            <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-01-21T00:00:00.0000000</Value>
@@ -12871,12 +12884,12 @@
             <Count>29</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-06-08T00:00:00.0000000</Value>
-            <Count>30</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-20T00:00:00.0000000</Value>
             <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-08T00:00:00.0000000</Value>
+            <Count>30</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-01-16T00:00:00.0000000</Value>
@@ -13075,16 +13088,16 @@
             <Count>26</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-11T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2021-03-17T00:00:00.0000000</Value>
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-05-05T00:00:00.0000000</Value>
             <Count>31</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-11T00:00:00.0000000</Value>
-            <Count>29</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-07-03T00:00:00.0000000</Value>
@@ -13107,19 +13120,19 @@
             <Count>28</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-04-29T00:00:00.0000000</Value>
-            <Count>17</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-17T00:00:00.0000000</Value>
             <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-29T00:00:00.0000000</Value>
+            <Count>17</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
         <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
-        <Column Name="REPORT_DT" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Column Name="REPORT_DT" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>409</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
@@ -13323,16 +13336,16 @@
             <Count>27</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-18T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2021-03-12T00:00:00.0000000</Value>
             <Count>29</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-04-30T00:00:00.0000000</Value>
             <Count>15</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-18T00:00:00.0000000</Value>
-            <Count>20</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-11-01T00:00:00.0000000</Value>
@@ -13447,12 +13460,12 @@
             <Count>38</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-04-27T00:00:00.0000000</Value>
-            <Count>24</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-15T00:00:00.0000000</Value>
             <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-27T00:00:00.0000000</Value>
+            <Count>24</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-07-15T00:00:00.0000000</Value>
@@ -13551,16 +13564,16 @@
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-24T00:00:00.0000000</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2020-07-27T00:00:00.0000000</Value>
             <Count>27</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-11-27T00:00:00.0000000</Value>
             <Count>24</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-24T00:00:00.0000000</Value>
-            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-08-19T00:00:00.0000000</Value>
@@ -14115,12 +14128,12 @@
             <Count>24</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2020-10-16T00:00:00.0000000</Value>
-            <Count>25</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-16T00:00:00.0000000</Value>
             <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-16T00:00:00.0000000</Value>
+            <Count>25</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-07-08T00:00:00.0000000</Value>
@@ -14239,16 +14252,16 @@
             <Count>25</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-13T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2020-10-19T00:00:00.0000000</Value>
             <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-01-01T00:00:00.0000000</Value>
             <Count>26</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-13T00:00:00.0000000</Value>
-            <Count>29</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-12-09T00:00:00.0000000</Value>
@@ -14303,12 +14316,12 @@
             <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2020-10-13T00:00:00.0000000</Value>
-            <Count>23</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-19T00:00:00.0000000</Value>
             <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-13T00:00:00.0000000</Value>
+            <Count>23</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-01-21T00:00:00.0000000</Value>
@@ -14475,12 +14488,12 @@
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-06-08T00:00:00.0000000</Value>
-            <Count>18</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-20T00:00:00.0000000</Value>
             <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-08T00:00:00.0000000</Value>
+            <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2021-01-16T00:00:00.0000000</Value>
@@ -14675,6 +14688,10 @@
             <Count>30</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>2021-06-23T00:00:00.0000000</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2021-03-17T00:00:00.0000000</Value>
             <Count>23</Count>
           </ValueDistributionItem>
@@ -14685,10 +14702,6 @@
           <ValueDistributionItem>
             <Value>2021-06-11T00:00:00.0000000</Value>
             <Count>24</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2021-06-23T00:00:00.0000000</Value>
-            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2020-07-03T00:00:00.0000000</Value>
@@ -14707,12 +14720,12 @@
             <Count>30</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2021-04-29T00:00:00.0000000</Value>
-            <Count>30</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2021-06-17T00:00:00.0000000</Value>
             <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-29T00:00:00.0000000</Value>
+            <Count>30</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -14763,12 +14776,12 @@
             <Count>563</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>63000</Value>
-            <Count>22</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>69000</Value>
             <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>63000</Value>
+            <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>40000</Value>
@@ -14859,24 +14872,24 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>15000</Value>
-            <Count>171</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>27000</Value>
             <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>15000</Value>
+            <Count>171</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>21000</Value>
             <Count>62</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>75000</Value>
-            <Count>19</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>81000</Value>
             <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>75000</Value>
+            <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>4000</Value>
@@ -14959,6 +14972,10 @@
             <Count>62</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>93000</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>99000</Value>
             <Count>27</Count>
           </ValueDistributionItem>
@@ -14967,16 +14984,12 @@
             <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>93000</Value>
-            <Count>16</Count>
+            <Value>10000</Value>
+            <Count>315</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>16000</Value>
             <Count>137</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>10000</Value>
-            <Count>315</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>22000</Value>
@@ -15011,12 +15024,12 @@
             <Count>179</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>79000</Value>
-            <Count>17</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>67000</Value>
             <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>79000</Value>
+            <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>56000</Value>
@@ -15055,12 +15068,12 @@
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>11000</Value>
-            <Count>158</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>14000</Value>
             <Count>172</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11000</Value>
+            <Count>158</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>74000</Value>
@@ -15083,12 +15096,12 @@
             <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>34000</Value>
-            <Count>80</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>28000</Value>
             <Count>74</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>34000</Value>
+            <Count>80</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>82000</Value>
@@ -15115,16 +15128,16 @@
             <Count>19</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>8000</Value>
-            <Count>238</Count>
+            <Value>17000</Value>
+            <Count>153</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5000</Value>
             <Count>573</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>17000</Value>
-            <Count>153</Count>
+            <Value>8000</Value>
+            <Count>238</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>68000</Value>
@@ -15307,12 +15320,12 @@
             <Count>92</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>38</Value>
-            <Count>102</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>87</Value>
             <Count>81</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>38</Value>
+            <Count>102</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>101</Value>
@@ -15531,12 +15544,12 @@
             <Count>89</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>34</Value>
-            <Count>97</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>40</Value>
             <Count>82</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>34</Value>
+            <Count>97</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>11</Value>
@@ -15639,15 +15652,15 @@
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>AGENT00978</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>AGENT01177</Value>
             <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00890</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>AGENT00978</Value>
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -15671,12 +15684,12 @@
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT00308</Value>
-            <Count>13</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>AGENT00468</Value>
             <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AGENT00308</Value>
+            <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00696</Value>
@@ -16127,12 +16140,12 @@
             <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT00950</Value>
-            <Count>14</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>AGENT00219</Value>
             <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AGENT00950</Value>
+            <Count>14</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00847</Value>
@@ -16223,11 +16236,11 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT01096</Value>
+            <Value>AGENT00118</Value>
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT00118</Value>
+            <Value>AGENT01096</Value>
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -16259,16 +16272,16 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>AGENT00204</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>AGENT00723</Value>
             <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00679</Value>
             <Count>13</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>AGENT00204</Value>
-            <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00030</Value>
@@ -16315,24 +16328,24 @@
             <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT00365</Value>
-            <Count>12</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>AGENT00374</Value>
             <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AGENT00365</Value>
+            <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00319</Value>
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT00096</Value>
-            <Count>12</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>AGENT00620</Value>
             <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AGENT00096</Value>
+            <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00391</Value>
@@ -16371,11 +16384,11 @@
             <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT00307</Value>
+            <Value>AGENT00301</Value>
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT00301</Value>
+            <Value>AGENT00307</Value>
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -16463,16 +16476,16 @@
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>AGENT00184</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>AGENT00761</Value>
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00381</Value>
             <Count>13</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>AGENT00184</Value>
-            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00595</Value>
@@ -16511,6 +16524,10 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>AGENT00481</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>AGENT00028</Value>
             <Count>12</Count>
           </ValueDistributionItem>
@@ -16520,10 +16537,6 @@
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00222</Value>
-            <Count>13</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>AGENT00481</Value>
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -16539,12 +16552,12 @@
             <Count>13</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>AGENT01028</Value>
-            <Count>12</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>AGENT00935</Value>
             <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AGENT01028</Value>
+            <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00643</Value>
@@ -16575,15 +16588,15 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>AGENT00619</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>AGENT00158</Value>
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AGENT00212</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>AGENT00619</Value>
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -16641,6 +16654,1594 @@
         <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
         <Column Name="CUSTOMER_ID" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>10000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
+        <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
+        <Table DataSource="ASUSVIVOBOOK" Database="Insurance_Claims_Fraud_Staging" Schema="dbo" Table="StgInsurance" RowCount="10000" />
+        <Column Name="TXN_DATE_TIME" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>395</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2020-07-29T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-16T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-26T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-06T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-03T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-13T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-21T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-29T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-08T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-14T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-06T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-31T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-06T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-01T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-21T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-24T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-04T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-10T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-05T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-19T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-23T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-17T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-22T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-01T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-12T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-19T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-26T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-28T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-20T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-18T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-12T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-31T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-22T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-08T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-20T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-12T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-30T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-28T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-07T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-26T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-12T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-04T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-18T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-24T00:00:00.0000000</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-06T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-20T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-24T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-30T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-02T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-12T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-30T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-18T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-01T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-11T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-19T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-16T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-09T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-29T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-26T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-13T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-18T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-21T00:00:00.0000000</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-10T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-26T00:00:00.0000000</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-14T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-03T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-03T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-06T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-18T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-25T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-20T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-08T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-09T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-01T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-07T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-07T00:00:00.0000000</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-16T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-23T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-09T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-23T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-04T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-27T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-15T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-15T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-27T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-15T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-23T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-25T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-02T00:00:00.0000000</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-17T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-03T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-09T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-29T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-11T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-17T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-15T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-05T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-09T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-27T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-04T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-11T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-12T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-09T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-04T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-20T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-01T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-27T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-27T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-24T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-19T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-11T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-04T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-14T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-07T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-30T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-27T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-17T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-06T00:00:00.0000000</Value>
+            <Count>41</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-15T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-21T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-30T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-04T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-10T00:00:00.0000000</Value>
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-08T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-26T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-02T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-10T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-28T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-06T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-28T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-03T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-16T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-05T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-24T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-16T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-22T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-30T00:00:00.0000000</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-18T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-16T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-10T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-26T00:00:00.0000000</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-12T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-18T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-10T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-10T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-22T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-27T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-30T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-24T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-14T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-01T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-07T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-19T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-24T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-27T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-17T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-04T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-09T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-12T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-07T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-24T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-23T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-29T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-20T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-03T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-11T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-18T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-18T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-02T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-22T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-14T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-15T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-05T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-13T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-23T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-21T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-25T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-02T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-21T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-13T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-01T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-21T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-08T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-29T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-21T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-01T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-13T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-07T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-19T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-15T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-25T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-25T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-01T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-07T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-13T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-15T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-03T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-25T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-18T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-10T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-02T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-07T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-13T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-14T00:00:00.0000000</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-20T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-28T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-10T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-22T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-27T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-02T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-05T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-09T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-19T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-10T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-25T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-04T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-28T00:00:00.0000000</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-30T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-09T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-15T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-19T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-17T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-23T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-03T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-06T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-08T00:00:00.0000000</Value>
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-24T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-03T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-16T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-24T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-16T00:00:00.0000000</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-08T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-26T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-22T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-26T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-14T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-28T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-04T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-12T00:00:00.0000000</Value>
+            <Count>38</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-30T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-22T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-02T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-28T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-08T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-14T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-26T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-16T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-16T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-08T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-12T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-10T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-05T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-02T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-28T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-07T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-25T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-20T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-21T00:00:00.0000000</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-22T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-30T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-02T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-07T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-25T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-15T00:00:00.0000000</Value>
+            <Count>37</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-17T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-06T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-18T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-22T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-16T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-05T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-27T00:00:00.0000000</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-31T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-13T00:00:00.0000000</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-05T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-11T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-29T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-20T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-11T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-19T00:00:00.0000000</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-01T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-13T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-09T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-06T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-29T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-19T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-01T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-29T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-17T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-27T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-05T00:00:00.0000000</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-23T00:00:00.0000000</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-31T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-13T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-19T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-21T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-11T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-15T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-23T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-31T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-08T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-16T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-25T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-03T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-23T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-20T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-26T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-18T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-11T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-21T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-28T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-23T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-24T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-06T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-12T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-07T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-08T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-19T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-31T00:00:00.0000000</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-06T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-13T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-14T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-24T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-22T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-14T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-22T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-01T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-14T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-02T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-10T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-12T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-01T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-20T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-02T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-30T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-06T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-08T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-20T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-16T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-28T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-14T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-04T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-02T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-22T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-26T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-14T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-28T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-05T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-03T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-13T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-26T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-12T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-31T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-05T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-08T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-28T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-15T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-20T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-23T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-05T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-11T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-09T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-29T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-18T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-24T00:00:00.0000000</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-25T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-10T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-03T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-27T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-07T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-17T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-09-04T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-30T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-02-17T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-09T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-25T00:00:00.0000000</Value>
+            <Count>41</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-21T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-27T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-06-04T00:00:00.0000000</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-11-17T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-15T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-25T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-12-13T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-11T00:00:00.0000000</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-08-29T00:00:00.0000000</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-21T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-17T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-05-05T00:00:00.0000000</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-11T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-23T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-07-03T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-03-09T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2020-10-11T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-01-19T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-04-29T00:00:00.0000000</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2021-06-17T00:00:00.0000000</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{84489C28-72BC-4E75-B63C-FD2841285917}</DataSourceID>
@@ -16704,12 +18305,12 @@
         <MaxLength>20</MaxLength>
         <LengthDistribution>
           <LengthDistributionItem>
-            <Length>9</Length>
-            <Count>24</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
             <Length>15</Length>
             <Count>130</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>24</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>12</Length>
@@ -17563,12 +19164,12 @@
             <Count>70</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>DC</Value>
-            <Count>75</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>CO</Value>
             <Count>89</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DC</Value>
+            <Count>75</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>AK</Value>
@@ -18010,11 +19611,11 @@
             <Count>41</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>40</Length>
+            <Length>34</Length>
             <Count>10</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>34</Length>
+            <Length>40</Length>
             <Count>10</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
@@ -18186,13 +19787,19 @@
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
-              <ColumnValue>William Wilson</ColumnValue>
+              <ColumnValue>Mary Jones</ColumnValue>
             </ColumnValues>
             <Count>3</Count>
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
-              <ColumnValue>Mary Jones</ColumnValue>
+              <ColumnValue>Joseph Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>William Wilson</ColumnValue>
             </ColumnValues>
             <Count>3</Count>
           </MultiColumnValueDistributionItem>
@@ -18210,12 +19817,6 @@
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
-              <ColumnValue>David Johnson</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
               <ColumnValue>David Cook</ColumnValue>
             </ColumnValues>
             <Count>3</Count>
@@ -18228,19 +19829,7 @@
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
-              <ColumnValue>David Lewis</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Joseph Smith</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>George Williams</ColumnValue>
+              <ColumnValue>David Johnson</ColumnValue>
             </ColumnValues>
             <Count>3</Count>
           </MultiColumnValueDistributionItem>
@@ -18252,33 +19841,15 @@
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
-              <ColumnValue>Tracy Smith</ColumnValue>
+              <ColumnValue>David Lewis</ColumnValue>
             </ColumnValues>
-            <Count>2</Count>
+            <Count>3</Count>
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
-              <ColumnValue>Michael Marshall</ColumnValue>
+              <ColumnValue>George Williams</ColumnValue>
             </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Stephen Smith</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Paul Jones</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Ronald Adams</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
+            <Count>3</Count>
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
@@ -18331,6 +19902,18 @@
           <MultiColumnValueDistributionItem>
             <ColumnValues>
               <ColumnValue>Patrick Rasmussen</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Stephen Smith</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Keith Stephens</ColumnValue>
             </ColumnValues>
             <Count>2</Count>
           </MultiColumnValueDistributionItem>
@@ -18558,48 +20141,6 @@
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
-              <ColumnValue>Keith Stephens</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Rachel Robinson</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Sylvia Velez</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Diane Smith</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Barbara Williams</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Michael Clark</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Joan Smith</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
               <ColumnValue>John Rodriguez</ColumnValue>
             </ColumnValues>
             <Count>2</Count>
@@ -18648,6 +20189,30 @@
           </MultiColumnValueDistributionItem>
           <MultiColumnValueDistributionItem>
             <ColumnValues>
+              <ColumnValue>Diane Smith</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Barbara Williams</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Clark</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Joan Smith</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
               <ColumnValue>Timothy Stewart</ColumnValue>
             </ColumnValues>
             <Count>2</Count>
@@ -18661,30 +20226,6 @@
           <MultiColumnValueDistributionItem>
             <ColumnValues>
               <ColumnValue>Brenda Rodriguez</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Frances Wright</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>John Brown</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Beverly Cook</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>Richard Rodriguez</ColumnValue>
             </ColumnValues>
             <Count>2</Count>
           </MultiColumnValueDistributionItem>
@@ -18727,6 +20268,66 @@
           <MultiColumnValueDistributionItem>
             <ColumnValues>
               <ColumnValue>Charles Ayala</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Rachel Robinson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Sylvia Velez</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Paul Jones</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Ronald Adams</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Frances Wright</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Brown</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Beverly Cook</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Richard Rodriguez</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Tracy Smith</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Marshall</ColumnValue>
             </ColumnValues>
             <Count>2</Count>
           </MultiColumnValueDistributionItem>
@@ -18917,16 +20518,16 @@
             <Count>20</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>94710</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>94544</Value>
             <Count>43</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>36110</Value>
             <Count>40</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>94710</Value>
+            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>72704</Value>
@@ -19177,12 +20778,12 @@
             <Count>18</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>36117</Value>
-            <Count>172</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>37211</Value>
             <Count>95</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>36117</Value>
+            <Count>172</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5452</Value>
@@ -19201,12 +20802,12 @@
             <Count>12</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>37013</Value>
-            <Count>73</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>31406</Value>
             <Count>47</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>37013</Value>
+            <Count>73</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2721</Value>
@@ -19253,12 +20854,12 @@
             <Count>61</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>20002</Value>
-            <Count>60</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>94709</Value>
             <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20002</Value>
+            <Count>60</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5495</Value>
@@ -19305,12 +20906,12 @@
             <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>40202</Value>
-            <Count>15</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>94560</Value>
             <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>40202</Value>
+            <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>37214</Value>
@@ -19557,24 +21158,24 @@
             <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>73170</Value>
-            <Count>17</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>31415</Value>
             <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>73170</Value>
+            <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>80011</Value>
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>20011</Value>
-            <Count>93</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>99501</Value>
             <Count>77</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20011</Value>
+            <Count>93</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>36104</Value>
@@ -19733,11 +21334,11 @@
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Stowe</Value>
+            <Value>Greeley</Value>
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Greeley</Value>
+            <Value>Stowe</Value>
             <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
@@ -19905,12 +21506,12 @@
             <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Millersville</Value>
-            <Count>16</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>Burlington</Value>
             <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Millersville</Value>
+            <Count>16</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Peoria</Value>
@@ -20165,12 +21766,12 @@
             <Count>20</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>#R 1</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>#8</Value>
             <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>#R 1</Value>
+            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>#5</Value>
@@ -20297,12 +21898,12 @@
             <Count>208</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>33</Value>
-            <Count>267</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>39</Value>
             <Count>233</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>33</Value>
+            <Count>267</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>53</Value>

@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Insurance_Claims_Fraud</Name>
-    <LastWriteTime>2022-05-01T06:05:36.1361817Z</LastWriteTime>
+    <LastWriteTime>2022-05-05T08:09:26.6478206Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,12 +13,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Data_Profiling.dtsx</Name>
-      <LastWriteTime>2022-04-29T06:52:46.5674632Z</LastWriteTime>
+      <LastWriteTime>2022-05-02T16:36:34.5599965Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Insurance_Claims_Fraud_Load_DW.dtsx</Name>
-      <LastWriteTime>2022-05-01T06:26:14.9684798Z</LastWriteTime>
+      <LastWriteTime>2022-05-06T06:13:41.7413794Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Insurance_Claims_Fraud_Update_CompleteTime.dtsx</Name>
+      <LastWriteTime>2022-05-06T06:10:17.6909551Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
