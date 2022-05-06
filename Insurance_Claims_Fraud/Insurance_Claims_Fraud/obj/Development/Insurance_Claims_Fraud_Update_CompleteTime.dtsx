@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Insurance_Claims_Fraud_Update_CompleteTime"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{0C932056-A106-4EDC-B082-01B7AE1B79A8}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{E0C602DC-45D1-4804-9185-0FE70E620DA4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1119,7 +1119,9 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">exec dbo.UpdateCompleteTimeFactInsurance ?,?,?,?,?,?,?,?,?,?,?,?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[FactInsurance]
+SET [accm_txn_complete_time] = ?, [txn_process_time_hours]=?
+WHERE [TransactionID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1142,86 +1144,43 @@
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[VendorKey]"
+                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[Txn_Process_Time_Hours]"
                       cachedDataType="i4"
-                      cachedName="VendorKey"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@VendorID]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[VendorKey]" />
+                      cachedName="Txn_Process_Time_Hours"
+                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Calculate Process Time Hours.Outputs[Derived Column Output].Columns[Txn_Process_Time_Hours]" />
                     <inputColumn
                       refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[TransactionID]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="TransactionID"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@TransactionID]"
+                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[TransactionID]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[LossDateKey]"
-                      cachedDataType="i4"
-                      cachedName="LossDateKey"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@LossDateKey]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[LossDateKey]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[ReportDateKey]"
-                      cachedDataType="i4"
-                      cachedName="ReportDateKey"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@ReportDateKey]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[ReportDateKey]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[PremiumAmount]"
-                      cachedDataType="r8"
-                      cachedName="PremiumAmount"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@PremiumAmount]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[PremiumAmount]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[ClaimAmount]"
-                      cachedDataType="i4"
-                      cachedName="ClaimAmount"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@ClaimAmount]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[ClaimAmount]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[Tenure]"
-                      cachedDataType="ui1"
-                      cachedName="Tenure"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@Tenure]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[Tenure]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[AgentKey]"
-                      cachedDataType="i4"
-                      cachedName="AgentKey"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@AgentID]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[AgentKey]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[CustomerKey]"
-                      cachedDataType="i4"
-                      cachedName="CustomerKey"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@CustomerID]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[CustomerKey]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[TxnDateKey]"
-                      cachedDataType="i4"
-                      cachedName="TxnDateKey"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@TxnDateKey]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[TxnDateKey]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="accm_txn_complete_time"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@Txn_complete_time]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
-                    <inputColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].Columns[Txn_Process_Time_Hours]"
-                      cachedDataType="i4"
-                      cachedName="Txn_Process_Time_Hours"
-                      externalMetadataColumnId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@Txn_process_time]"
-                      lineageId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Calculate Process Time Hours.Outputs[Derived Column Output].Columns[Txn_Process_Time_Hours]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@VendorID]"
+                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       dataType="i4"
-                      name="@VendorID">
+                      name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1230,125 +1189,15 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@TransactionID]"
+                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       dataType="wstr"
                       length="50"
-                      name="@TransactionID">
+                      name="Param_2">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@LossDateKey]"
-                      dataType="i4"
-                      name="@LossDateKey">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@ReportDateKey]"
-                      dataType="i4"
-                      name="@ReportDateKey">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@PremiumAmount]"
-                      dataType="r8"
-                      name="@PremiumAmount">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@ClaimAmount]"
-                      dataType="i4"
-                      name="@ClaimAmount">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@Tenure]"
-                      dataType="ui1"
-                      name="@Tenure">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@AgentID]"
-                      dataType="i4"
-                      name="@AgentID">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@CustomerID]"
-                      dataType="i4"
-                      name="@CustomerID">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@TxnDateKey]"
-                      dataType="i4"
-                      name="@TxnDateKey">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@Txn_complete_time]"
-                      dataType="dbTimeStamp"
-                      name="@Txn_complete_time">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance.Inputs[OLE DB Command Input].ExternalColumns[@Txn_process_time]"
-                      dataType="i4"
-                      name="@Txn_process_time">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -1771,6 +1620,10 @@
           Size="170.4,41.6"
           Id="Package\Transform and Load Complete Time Updated Insurance Fact Table\Fact Insurance Sort"
           TopLeft="510.000008685249,145.294119684754" />
+        <NodeLayout
+          Size="291.2,41.6"
+          Id="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance"
+          TopLeft="304.285719467669,413.211768470256" />
         <EdgeLayout
           Id="Package\Transform and Load Complete Time Updated Insurance Fact Table.Paths[Sort Output1]"
           TopLeft="293.800003831727,187.658825577832">
@@ -1929,10 +1782,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="291.2,41.6"
-          Id="Package\Transform and Load Complete Time Updated Insurance Fact Table\Load Complete Time Updated Fact Insurance"
-          TopLeft="304.285719467669,413.211768470256" />
         <EdgeLayout
           Id="Package\Transform and Load Complete Time Updated Insurance Fact Table.Paths[Derived Column Output]"
           TopLeft="447.279370530284,366.593466316393">
